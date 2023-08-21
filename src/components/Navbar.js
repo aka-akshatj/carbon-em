@@ -17,8 +17,8 @@ export default function Navbar() {
       href: "/audit",
     },
     {
-      name: "MY GREEN NFTS",
-      href: "/my-green-nfts",
+      name: "CERTIFICATION",
+      href: "/certification",
     },
     {
       name: "MARKETPLACE",

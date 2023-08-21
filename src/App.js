@@ -20,6 +20,7 @@ function App() {
   const [greenNFT, setGreenNFT] = useState("");
   const [order, setOrder] = useState("");
   const [document, setDocument] = useState("");
+  const [reference, setReference] = useState("");
 
   const form = {
     register: {
@@ -38,6 +39,7 @@ function App() {
           placeholder: "e.g) 50",
           value: CO2,
           setValue: setCO2,
+          type: "number",
         },
       ],
     },
@@ -64,24 +66,28 @@ function App() {
           placeholder: "e.g) 1",
           value: projctID,
           setValue: setProjectID,
+          type: "number",
         },
         {
           label: "CO2 Reductions",
           placeholder: "e.g) 25",
           value: CO2Reductions,
           setValue: setCO2Reductions,
+          type: "number",
         },
         {
           label: "Starting date of monitoring period",
           placeholder: "e.g) 2021/10/01",
           value: startingDate,
           setValue: setStartingDate,
+          type: "date",
         },
         {
           label: "Ending Date",
           placeholder: "e.g) 2021/10/01",
           value: endingDate,
           setValue: setEndingDate,
+          type: "date",
         },
         {
           label: "Reference Document",
@@ -94,19 +100,20 @@ function App() {
     audit: {
       heading: "Audit a CO2 reduction ",
       button: "Audit",
-      href: "/my-green-nfts",
+      href: "/certification",
       inputs: [
         {
           label: "Claim ID",
           value: claimID,
           placeholder: "e.g) 2021/10/01",
           setValue: setClaimID,
+          type: "number",
         },
         {
           label: "Reference Document",
-          value: document,
+          value: reference,
           placeholder: "e.g) 2021/10/01",
-          setValue: setDocument,
+          setValue: setReference,
           type: "file",
         },
       ],
@@ -127,6 +134,7 @@ function App() {
           placeholder: "e.g) 10",
           value: order,
           setValue: setOrder,
+          type: "number",
         },
       ],
     },
@@ -139,7 +147,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<Register form={form} />} />
           <Route path="/marketplace" element={<Marketplace form={form} />} />
-          <Route path="/my-green-nfts" element={<MyGreenNFT form={form} />} />
+          <Route path="/certification" element={<MyGreenNFT form={form} />} />
           <Route path="/claim" element={<Claim form={form}></Claim>} />
           <Route path="/audit" element={<Audit form={form}></Audit>} />
         </Routes>

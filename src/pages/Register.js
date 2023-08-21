@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Card from "../components/Card";
 
 function Register({ form }) {
-  const [projectname, setProjectName] = useState("");
-  const [co2, setCo2] = useState("");
+  
   return (
     <div className="flex my-20 justify-center items-center  flex-col gap-10">
       {/* <div className="font-bold text-2xl  w-full">Register a Project </div>
